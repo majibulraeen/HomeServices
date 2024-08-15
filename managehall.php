@@ -19,6 +19,7 @@
         <table class="table">
             <tr>
                 <th>Photo</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Contact</th>
                 <th>Address</th>
@@ -33,6 +34,8 @@
                         src="images/<?= $provider->photo; ?>"
                         alt="photo">
                 </td>
+                <td><?= $provider->id; ?>
+                </td>
                 <td><?= $provider->name; ?>
                 </td>
                 <td><?= $provider->contact; ?>
@@ -46,11 +49,17 @@
                 <td><?= $provider->profession; ?>
                 </td>
                 <td>
+                    <form action="editprovider.php" method="post">
+                        <input type="hidden" name="id"
+                            value="<?= $provider->id ;?>">
+                        <button type="submit" name="editprovider" class="btn btn-success btn-block">View</a>
+                    </form>
                     <form action="deletehall.php" method="post">
                         <input type="hidden" name="id"
                             value="<?= $provider->id ;?>">
-                        <button type="submit" name="remove" class="btn btn-danger btn-block">Remove</a>
+                        <button type="submit" name="remove" class="btn btn-danger btn-block mt-2">Remove</a>
                     </form>
+
                 </td>
             </tr>
             <?php endforeach; ?>

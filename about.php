@@ -28,7 +28,7 @@
                 <h5>Mobile:</h5>
                 <ul class="list-unstyled">
                 <li> +977- 9804867811</li>
-                <li> +977- 8800XXXXXX34</li>
+                <li> +977- 9804756665</li>
             </ul>
             </div>
             <hr>
@@ -47,43 +47,42 @@
         </div>
         </div>
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <input id="Full Name" name="Full Name" placeholder="Full Name" class="form-control" type="text">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                            </div>
-                          </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input id="Mobile No." name="Mobile No." placeholder="Mobile No." class="form-control" required="required" type="text">
-                            </div>
-                            <div class="form-group col-md-6">
-                                      
-                                      <select id="inputState" class="form-control">
-                                        <option selected>Choose ...</option>
-                                        <option> New Buyer</option>
-                                        <option> Auction</option>
-                                        <option> Complaint</option>
-                                        <option> Feedback</option>
-                                      </select>
-                            </div>
-                            <div class="form-group col-md-12">
-                                      <textarea id="comment" name="comment" cols="40" rows="5" placeholder="Your Message"class="form-control"></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <button type="button" class="btn btn-danger">Submit</button>
-                        </div>
-                    </form>
+    <div class="card">
+        <div class="card-body">
+            <form action="scripts/aboutrev.php" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input id="Full_Name" name="Full_Name" placeholder="Full Name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+                    </div>
                 </div>
-            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="Mobile_No" name="Mobile_No" placeholder="Mobile No." class="form-control" required="required" type="text" minlength="10" maxlength="10">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select name="inputState" id="inputState" class="form-control">
+                            <option selected>Choose ...</option>
+                            <option value="new_installation">New Installation</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <textarea id="comment" name="comment" cols="40" rows="5" placeholder="Your Message" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="submit" name="review" id="review" class="btn btn-danger">Submit</button>
+                </div>
+            </form>
         </div>
+    </div>
+</div>
+
+
     </div>
     
     

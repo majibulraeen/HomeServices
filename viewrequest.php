@@ -1,38 +1,44 @@
 <?php
     include_once "scripts/checklogin.php";
-    include_once "scripts/DB.php";
     include_once "include/header.php";
+    include_once "scripts/DB.php";
 
-    if (!check("admin")) {
+    if (!check()) {
         header('Location: logout.php');
         exit();
     }
 
-    $sql = "SELECT b.*, p.name AS provider_name FROM bookings AS b, providers AS p WHERE b.provider_id = p.id ORDER BY b.date DESC";
+     $_SESSION['user'];
+     $id= $_SESSION['user']->id;
+     $name= $_SESSION['user']->name;
+    $stmt = DB::query("SELECT * FROM bookings WHERE provider_id=$id");
 
-    $bookings = DB::query($sql)->fetchAll(PDO::FETCH_OBJ);
-
-
-    include_once "msg/admin.php";
+    $bookings = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
-<div class="container" style="margin-top: 30px; margin-bottom: 60px;">
-    <h2 class="text-center"> Bookings </h2>
+    <div class="container" style="margin-top: 30px; margin-bottom: 60px;">
+    <h2 class="text-center"> Booking Request for You <?= $name ?></h2><br>
     <div class="table-responsive">
         <table class="table">
             <tr>
-                <th>Name</th>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
                 <th>Contact</th>
                 <th>Address</th>
                 <th>Date</th>
-                <th>Payment Method</th>
-                <th>Queries</th>
-                <th>Provider Name</th>
+                <th>Payment</th>
+                <th>Problem</th>
                 <th>Action</th>
             </tr>
             <?php foreach ($bookings as $booking): ?>
-            <tr>
+            <tr><td>
+                <?= $booking->id; ?>
+                </td>
                 <td>
-                    <?= $booking->fname; ?> <?= $booking->lname; ?>
+                    <?= $booking->fname; ?>
+                </td>
+                <td>
+                    <?= $booking->lname; ?>
                 </td>
                 <td>
                     <?= $booking->contact; ?>
@@ -50,19 +56,17 @@
                     <?= $booking->queries; ?>
                 </td>
                 <td>
-                    <?= $booking->provider_name; ?>
-                </td>
-                <td>
                     <a class="btn btn-success col-sm-12"
-                        href="viewbooking.php?id=<?= $booking->provider_id; ?>">View</a>
+                        href="#viewbooking.php?id=<?= $booking->provider_id; ?>">Approve</a>
                         <br>
                     <a class="btn btn-danger mt-3 col-sm-12"
-                        href="deletebooking.php?id=<?= $booking->id; ?>">Remove</a>
+                        href="#deletebooking.php?id=<?= $booking->id; ?>">Remove</a>
+
                 </td>
+                
             </tr>
             <?php endforeach; ?>
         </table>
     </div>
 </div>
-
-<?php include_once "include/footer.php";
+<?php include_once "./include/footer.php";

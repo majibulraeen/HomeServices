@@ -12,16 +12,16 @@ include_once "./include/header.php";
   height: 300px;
 }
 #Services{
-  height: 500px;
+  height: 400px;
 }
 </style>
   <!-- Start Header Jumbotron-->
-  <header class="jumbotron back-image" style="background-image: url(./images/4.jpg);">
+  <header class="jumbotron back-image" style="background-image: url(./images/logo.png);">
     <div class="myclass mainHeading">
       <h1 class="text-uppercase text-danger font-weight-bold">Welcome to Home Services</h1>
-      <p class="font-italic">Customer's Happiness is our Aim</p>
+      <h3 class="font-italic">Customer's Happiness is our Aim</h3>
       <a href="./login.php" class="btn btn-success mr-4">Login</a>
-      <a href="./register.php" class="btn btn-danger mr-4">Register</a>
+      <a href="./register.php" class="btn btn-danger mr-4">Register As Provider</a>
     </div>
   </header> <!-- End Header Jumbotron -->
 

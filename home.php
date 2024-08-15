@@ -34,11 +34,11 @@ $cities = ["Kathmandu", "Lalitpur", "Bhaktapur"];
     <div class="form-group row">
         <div class="col-6">
             <label for="lat">Latitude:</label>
-            <input type="text" class="form-control" id="lat" name="lat" readonly>
+            <input type="text" class="form-control" id="lat" name="lat" required>
         </div>
         <div class="col-6">
             <label for="lon">Longitude:</label>
-            <input type="text" class="form-control" id="lon" name="lon" readonly>
+            <input type="text" class="form-control" id="lon" name="lon" required>
         </div>
     </div>
 
@@ -55,6 +55,7 @@ $cities = ["Kathmandu", "Lalitpur", "Bhaktapur"];
                     <th>Address</th>
                     <th>Profession</th>
                     <th>Contact</th>
+                    <th>Distance</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -98,7 +99,9 @@ $cities = ["Kathmandu", "Lalitpur", "Bhaktapur"];
                                 "<td><img style='height:150px' src='images/" + provider.photo + "'/></td>" +
                                 "<td>" + provider.name + "</td>" +
                                 "<td>" + provider.adder + ",<br>" + provider.city + "</td>" +
-                                "<td>" + provider.profession + "</td>" +"<td>" + provider.contact + "</td>" +
+                                "<td>" + provider.profession + "</td>" +
+                                "<td>" + provider.contact + "</td>" +
+                                "<td>" + provider.distance + "km</td>" +
                                 "<td><a href='booking.php?provider=" + provider.id + "' class='btn btn-primary btn-block'>Book</a></td>" +
                                 "</tr>";
                         });

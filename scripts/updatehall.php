@@ -15,9 +15,11 @@ if (isset($_POST['register'])) {
     $name = $input['name'];
     $contact = $input['contact'];
     $descr = $input['descr'];
-    $adder1 = $input['adder1'];
-    $adder2 = $input['adder2'];
+    $adder = $input['adder'];
+    $email = $input['email'];
     $city = $input['city'];
+    $latitude = $input['latitude'];
+    $longitude = $input['longitude'];
     $password = $input['password'];
     $profession = $input['profession'];
 
@@ -31,8 +33,8 @@ if (isset($_POST['register'])) {
     }
 
     $isProviderCreated = DB::query(
-        "UPDATE providers SET name=?, contact=?, adder1=?, adder2=?, city=?, photo=?, descr=?, password=?, profession=? WHERE id=?",
-        [$name,$contact,$adder1,$adder2,$city,$file1, $descr, $password, $profession,$_SESSION['user']->id]
+        "UPDATE providers SET name=?, contact=?, adder=?, email=?, city=?, latitude=?, longitude=?,  photo=?, descr=?, password=?, profession=? WHERE id=?",
+        [$name,$contact,$adder,$email,$city,$latitude,$longitude,$file1, $descr, $password, $profession,$_SESSION['user']->id]
     );
 
     if ($isProviderCreated) {

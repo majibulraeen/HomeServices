@@ -1,5 +1,4 @@
 <?php include_once "./include/header.php"; ?>
-
 <?php
 $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
 ?>
@@ -30,7 +29,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                 <div class="form-group">
                     <label for="">Address</label>
                     <input id="adder" name="adder" type="text" class="form-control" placeholder="Enter Your Address"
-                        required>
+                    required>
                 </div>
 
                 <div class="form-group">
@@ -51,10 +50,10 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                 <div class="form-group">
                      <!-- latitude and longitude header -->
                     <label for="latitude">Latitude:</label>
-                    <input type="text" class="form-control" id="latitude" name="latitude" readonly>
+                    <input type="text" class="form-control" id="latitude" name="latitude" required>
                     <br>
                     <label for="longitude">Longitude:</label>
-                    <input type="text" class="form-control" id="longitude" name="longitude" readonly>
+                    <input type="text" class="form-control" id="longitude" name="longitude" required>
                 </div>
 
                 <div class="form-group">

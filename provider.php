@@ -15,7 +15,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
     <div class="card">
         <div class="card-body">
             <div class="card-title">
-                <h3 class="text-center">Update Marriage Hall Information</h3>
+                <h3 class="text-center">Update Your Information</h3>
             </div>
             <hr>
 
@@ -34,17 +34,29 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                 </div>
 
                 <div class="form-group">
-                    <label for="">Address Line 1</label>
-                    <input value="<?= $provider->adder1; ?>"
-                        id="adder1" name="adder1" type="text" class="form-control" placeholder="Enter Address line-1"
+                    <label for="">Address</label>
+                    <input value="<?= $provider->adder; ?>"
+                        id="adder1" name="adder1" type="text" class="form-control" placeholder="Enter Address"
                         required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Address
-                        Line 2</label>
-                    <input value="<?= $provider->adder2; ?>"
-                        id="adder2" name="adder2" type="text" class="form-control" placeholder="Enter Address line-2"
+                    <label for="">Email</label>
+                    <input value="<?= $provider->email; ?>"
+                        id="email" name="email" type="text" class="form-control" placeholder="Enter Your Email Address"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="">Latitude</label>
+                    <input value="<?= $provider->latitude; ?>"
+                        id="latitude" name="latitude" type="text" class="form-control" placeholder="Enter latitude"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Longitude</label>
+                    <input value="<?= $provider->longitude; ?>"
+                        id="longitude" name="longitude" type="text" class="form-control" placeholder="Enter longitude"
                         required>
                 </div>
 

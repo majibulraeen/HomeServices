@@ -118,7 +118,7 @@ include_once "msg/booking.php";
 
                 <button style="margin-top: 30px" class="btn btn-block btn-primary" type="submit" name="book"
                     id="book">Book
-                    Hall</button>
+                </button>
             </form>
 
         </div>

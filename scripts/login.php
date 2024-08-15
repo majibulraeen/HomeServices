@@ -15,7 +15,7 @@ if (isset($_POST['login'])) {
         $s->name = "admin";
         $_SESSION['user'] = $s;
 
-        header('Location: ../admin.php');
+        header('Location: ../managehall.php');
         exit();
     } else {
         $stmt = DB::query(
@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
 
         if (isset($provider->name)) {
             $_SESSION['user'] = $provider;
-            header('Location: ../provider.php');
+            header('Location: ../viewrequest.php');
             exit();
         } else {
             header('Location: ../login.php?msg=failed');

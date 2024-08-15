@@ -39,6 +39,6 @@ if (isset($_POST['city']) && isset($_POST['profession']) && isset($_POST['lat'])
     } else {
         echo '{"failed": true }';
     }
-} else {
-    echo '{"error": "Invalid parameters"}';
 }
+?>
+

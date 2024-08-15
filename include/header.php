@@ -21,8 +21,12 @@
 </head>
 
 <body onload="getLocation()">
+    
     <nav class="nav bg-warning">
         <?php if (!isset($_SESSION['user'])): ?>
+        <a class="nav">
+        <img style="height: 50px;margin-left: 1px;" src="./images/logo.png" alt="Logo">
+        </a>
         <a class="nav-link active" href="index.php">Home</a>
         <a class="nav-link " href="home.php">Find Service Provider</a>
         <a class="nav-link" href="login.php">Login</a>
@@ -30,11 +34,20 @@
         <a class="nav-link" href="about.php">About</a>
 
         <?php elseif ($_SESSION['user']->name == 'admin'): ?>
+        <a class="nav">
+        <img style="height: 50px;margin-left: 1px;" src="./images/logo.png" alt="Logo">
+        </a>
         <a class="nav-link" href="managehall.php">Manage Providers</a>
         <a class="nav-link" href="admin.php">Manage Booking</a>
+        <a class="nav-link" href="contact.php">View Contact</a>
         <a class="nav-link" href="logout.php">Log Out</a>
 
         <?php else: ?>
+            <a class="nav">
+        <img style="height: 50px;margin-left: 1px;" src="./images/logo.png" alt="Logo">
+        </a>
+        <a class="nav-link" href="viewrequest.php">View Request</a>
+        <a class="nav-link" href="Provider.php">Update Profile</a>
         <a class="nav-link" href="logout.php">Log Out</a>
         <?php endif; ?>
 
