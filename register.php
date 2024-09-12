@@ -79,7 +79,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                     <select class="form-control" name="profession" id="profession">
                         <option value="electrician">Electrician</option>
                         <option value="plumber">Plumber</option>
-                        <option value="mobile">Mobile Repairer</option>
+                        <option value="home_cleaner">Home Cleaning</option>
                     </select>
                 </div>
 

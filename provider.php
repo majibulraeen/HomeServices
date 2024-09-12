@@ -19,7 +19,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
             </div>
             <hr>
 
-            <form action="scripts/updatehall.php" method="post" enctype="multipart/form-data">
+            <form action="scripts/updateprovider.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Name</label>
                     <input value="<?= $provider->name; ?>" id="name"
@@ -36,7 +36,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                 <div class="form-group">
                     <label for="">Address</label>
                     <input value="<?= $provider->adder; ?>"
-                        id="adder1" name="adder1" type="text" class="form-control" placeholder="Enter Address"
+                        id="adder" name="adder" type="text" class="form-control" placeholder="Enter Address"
                         required>
                 </div>
 
@@ -105,7 +105,7 @@ $cities = ["Kathmandu", "Lalitpur","Bhaktapur"];
                     <select class="form-control" name="profession" id="profession">
                         <option value="electrician">Electrician</option>
                         <option value="plumber">Plumber</option>
-                        <option value="mobile">Mobile Repairer</option>
+                        <option value="home_cleaner">Home Cleaning</option>
                     </select>
                 </div>
 

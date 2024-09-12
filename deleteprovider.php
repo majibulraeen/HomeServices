@@ -14,10 +14,10 @@ if (isset($_POST['remove'])) {
     $isRemoved = DB::query("DELETE FROM providers WHERE id=?", [$input['id']]);
 
     if ($isRemoved) {
-        header('Location: managehall.php?msg=success');
+        header('Location: manageprovider.php?msg=success');
         exit();
     } else {
-        header('Location: managehall.php?msg=failed');
+        header('Location: manageprovider.php?msg=failed');
         exit();
     }
 }

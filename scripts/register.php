@@ -15,7 +15,8 @@ if (isset($_POST['register'])) {
     $city = $input['city'];
     $latitude=$input['latitude'];
     $longitude =$input['longitude'];
-    $password = $input['password'];
+    $psin = $input['password'];
+    $password=md5($psin);
     $profession = $input['profession'];
 
     $photo = $_FILES['photo'];

@@ -21,13 +21,13 @@
         <table class="table">
             <tr>
                 <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Name</th>
                 <th>Contact</th>
                 <th>Address</th>
                 <th>Date</th>
                 <th>Payment</th>
                 <th>Problem</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
             <?php foreach ($bookings as $booking): ?>
@@ -35,10 +35,7 @@
                 <?= $booking->id; ?>
                 </td>
                 <td>
-                    <?= $booking->fname; ?>
-                </td>
-                <td>
-                    <?= $booking->lname; ?>
+                    <?= $booking->name; ?>
                 </td>
                 <td>
                     <?= $booking->contact; ?>
@@ -56,11 +53,14 @@
                     <?= $booking->queries; ?>
                 </td>
                 <td>
+                    <?= $booking->status == 0 ? "Active" : "Complete"; ?>
+                </td>
+                <td>
                     <a class="btn btn-success col-sm-12"
-                        href="#viewbooking.php?id=<?= $booking->provider_id; ?>">Approve</a>
+                        href="approvebooking.php?id=<?= $booking->id; ?>">Approve</a>
                         <br>
                     <a class="btn btn-danger mt-3 col-sm-12"
-                        href="#deletebooking.php?id=<?= $booking->id; ?>">Remove</a>
+                        href="deletebook.php?id=<?= $booking->id; ?>">Remove</a>
 
                 </td>
                 

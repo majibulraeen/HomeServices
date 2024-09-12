@@ -7,17 +7,17 @@ if (isset($_POST['book'])) {
     $input = clean($_POST);
  
     $provider = $_POST['provider'];
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
+    $name = $_POST['name'];
     $contact = $_POST['contact'];
     $adder = $_POST['adder'];
+    $status = 0;
     $date = $_POST['date'];
     $queries = $_POST['queries'];
     $payment = $_POST['payment'];
 
     $sql = "INSERT INTO bookings values(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?)";
     $isBooked = DB::query($sql, [
-        $provider, $fname, $lname, $contact, $adder, $date, $payment, $queries
+        $provider, $name, $contact, $adder, $adder, $date, $payment, $queries
     ]);
 
     if ($isBooked) {

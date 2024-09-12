@@ -6,10 +6,9 @@ include_once "./include/header.php";
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  min-height: 90vh;
+  min-height: 95vh;
   border-radius: 0px;
   margin-top:auto;
-  height: 300px;
 }
 #Services{
   height: 400px;
@@ -55,16 +54,37 @@ include_once "./include/header.php";
     <h2>Our Services</h2>
     <div class="row mt-4">
       <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fa fa-tv fa-5x text-success"></i></a>
         <h4 class="mt-4">Electronic Appliances</h4>
+          <div class="card">
+            <img src="./images/electronic.jfif" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">Electronic Appliances</h5>
+                  <p class="card-text">Duis aute irure dolor in reprehenderit in
+                      voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
       </div>
       <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fa fa-sliders fa-5x text-primary"></i></a>
         <h4 class="mt-4">Home Cleaning</h4>
+        <div class="card">
+            <img src="./images/homeclean.jfif" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">Home Cleaning</h5>
+                  <p class="card-text">Duis aute irure dolor in reprehenderit in
+                      voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
       </div>
       <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fa fa-cogs fa-5x text-info"></i></a>
         <h4 class="mt-4">Fault Repair</h4>
+        <div class="card">
+            <img src="./images/fault.jfif" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">Fault Repair</h5>
+                  <p class="card-text">Duis aute irure dolor in reprehenderit in
+                      voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
       </div>
     </div>
   </div> <!-- End Services -->

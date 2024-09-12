@@ -91,9 +91,15 @@ $cities = ["Kathmandu", "Lalitpur", "Bhaktapur"];
                 var tbody = "";
                 try {
                     var providers = JSON.parse(res);
+
                     if (providers.failed) {
                         tbody = "<tr><td colspan='5'>No Service Providers found...</td></tr>";
                     } else {
+                        // Create a formatter for 5 significant digits
+                        var formatter = new Intl.NumberFormat('en-US', {
+                            maximumSignificantDigits: 2
+                        });
+
                         providers.forEach(function(provider) {
                             tbody += "<tr>" +
                                 "<td><img style='height:150px' src='images/" + provider.photo + "'/></td>" +
@@ -101,7 +107,8 @@ $cities = ["Kathmandu", "Lalitpur", "Bhaktapur"];
                                 "<td>" + provider.adder + ",<br>" + provider.city + "</td>" +
                                 "<td>" + provider.profession + "</td>" +
                                 "<td>" + provider.contact + "</td>" +
-                                "<td>" + provider.distance + "km</td>" +
+                                // Format the distance to 5 significant digits
+                                "<td>" + formatter.format(provider.distance) + " km</td>" +
                                 "<td><a href='booking.php?provider=" + provider.id + "' class='btn btn-primary btn-block'>Book</a></td>" +
                                 "</tr>";
                         });

@@ -54,7 +54,7 @@
                             value="<?= $provider->id ;?>">
                         <button type="submit" name="editprovider" class="btn btn-success btn-block">View</a>
                     </form>
-                    <form action="deletehall.php" method="post">
+                    <form action="deleteprovider.php" method="post">
                         <input type="hidden" name="id"
                             value="<?= $provider->id ;?>">
                         <button type="submit" name="remove" class="btn btn-danger btn-block mt-2">Remove</a>

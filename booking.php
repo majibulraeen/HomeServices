@@ -66,22 +66,17 @@ include_once "msg/booking.php";
     <div class="card">
         <div class="card-body">
             <div class="card-title">
-                <h3 class="text-center">Book Appointment from <?= $provider->name; ?>
+                <h3 class="text-center">Book Appointment for<?= $provider->name; ?>
                 </h3>
             </div>
             <hr>
 
-            <form action="scripts/bookhall.php" method="post">
+            <form action="scripts/bookprovider.php" method="post">
                 <input type="hidden" name="provider"
                     value="<?= $provider->id; ?>">
                 <div class="form-group">
-                    <label for="">First Name</label>
-                    <input id="fname" name="fname" type="text" class="form-control" placeholder="First Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Last Name</label>
-                    <input id="lname" name="lname" type="text" class="form-control" placeholder="Last Name" required>
+                    <label for="">Name</label>
+                    <input id="name" name="name" type="text" class="form-control" placeholder=" Enter Your Name" required>
                 </div>
 
                 <div class="form-group">
@@ -106,7 +101,7 @@ include_once "msg/booking.php";
                     <label for="">Payment Mode</label>
                     <select class="form-control" name="payment" id="payment" required>
                         <option value="cash">Cash</option>
-                        <option value="card">Debit Card</option>
+                        <option value="online">Online</option>
                     </select>
                 </div>
 
